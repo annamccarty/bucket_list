@@ -1,0 +1,10 @@
+<h2>Activity</h2>
+
+<%= @activity.body %>
+
+
+<hr />
+
+<%= link_to 'Edit Activity', edit_destination_activity_path([@destination, @activity]) %>
+<%= link_to 'Delete Activity', [@destination, @activity], method: :delete %>
+<%= link_to 'Back To Destination', list_destination_path(@destination) %>

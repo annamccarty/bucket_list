@@ -1,0 +1,13 @@
+<h1><%= @list.name %> - <%= @destination.name %></h1>
+<h2>Activities</h2>
+
+<% @destination.activities.each do |activity| %>
+  <li><%= link_to activity.body, [@destination, activity] %></li>
+<% end %>
+
+<hr />
+
+<%= link_to 'Add Activity', new_destination_activity_path(@destination) %>
+<%= link_to 'Edit Destination', edit_list_destination_path([@list, @destination]) %>
+<%= link_to 'Delete Destination', [@list, @destination], method: :delete %>
+<%= link_to 'Back To Destinations', list_destinations_path(@list) %>

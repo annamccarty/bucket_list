@@ -1,0 +1,7 @@
+<h1>Add an Activity</h1>
+<%= form_for [@destination, @activity] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+  <br />
+  <%= f.submit %>
+<% end %>

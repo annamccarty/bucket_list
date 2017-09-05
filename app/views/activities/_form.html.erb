@@ -1,0 +1,8 @@
+<h1><%= @destination.id ? 'Edit Activity' : 'Create Activity' %></h1>
+<hr />
+<%= form_for [@destination, @activity] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true, autofocus: true %>
+  <br />
+  <%= f.submit %>
+<% end %>

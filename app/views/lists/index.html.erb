@@ -1,0 +1,7 @@
+<h1>Click a bucket list to view details</h1>
+<%= link_to 'Create a new bucket list', new_list_path %>
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list %></li>
+  <% end %>
+</ul>

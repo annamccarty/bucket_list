@@ -1,0 +1,7 @@
+<h1>Click a Destination To View Activities</h1>
+<%= link_to 'Come up with a new destination', new_list_destination_path(@list) %>
+<ul>
+  <% @destinations.each do |destination| %>
+    <li><%= link_to destination.name, [@list, destination] %></li>
+  <% end %>
+</ul>
